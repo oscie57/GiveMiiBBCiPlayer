@@ -1,7 +1,7 @@
 # GiveMiiBBCiPlayer
 
 Since August 31st, 2016 the BBC iPlayer app for the Wii U has been discontinued and the app can no longer be accessed.  
-To check if the service is available the YouTube app requests a service token from `https://account.nintendo.net/v1/api/provider/service_token/` with a BBC iPlayer specific client id.
+To check if the service is available the BBC iPlayer app requests a service token from `https://account.nintendo.net/v1/api/provider/service_token/` with a BBC iPlayer specific client id.
 
 This endpoint now responds with:
 
@@ -15,7 +15,7 @@ This endpoint now responds with:
 ```
 
 The app then checks if acquiring this token has been sucessful and if not it will display the error. The acquired token itself is not used.  
-This is a Wii U Plugin System plugin for Aroma which just makes this request always return sucess and thus allowing the YouTube app to continue functioning.
+This is a Wii U Plugin System plugin for Aroma which just makes this request always return sucess and thus allowing the BBC iPlayer app to continue functioning.
 
 This project is a fork of [GiveMiiYouTube](https://github.com/PretendoNetwork/GiveMiiYouTube), a similar project that instead patches the YouTube app.
 
