@@ -19,9 +19,11 @@ WUPS_PLUGIN_LICENSE("MIT");
 #define IPLAYER_CLIENT_ID "a2efa818a34fa16b8afbc8a74eba3eda"
 #define IPLAYER_TITLE_ID 0x0005000010154800llu
 
+WHBLogPrintf("GiveMiiBBCiPlayer: BBC iPlayer patch loaded");
 
 DECL_FUNCTION(int, AcquireIndependentServiceToken__Q2_2nn3actFPcPCc, uint8_t* token, const char* client_id)
 {
+    WHBLogPrintf("GiveMiiBBCiPlayer: AcquireIndependentServiceToken__Q2_2nn3actFPcPCc(%p, %s)", token, client_id);
     // If this is the BBC iPlayer client, return sucess
     if (client_id && strcmp(client_id, IPLAYER_CLIENT_ID) == 0) {
         WHBLogPrintf("GiveMiiBBCiPlayer: Faking service sucess for '%s'", client_id);
